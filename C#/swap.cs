@@ -1,18 +1,25 @@
-using System.Collections.Generic;
 using System;
-using System.Linq;
- 
-  public class swap 
-   {  
-     public static void Main(string[] args)  
-      {  
-       int x=20, y=30;            
-       Console.WriteLine("Before swap:"); 
-       Console.WriteLine("x = " + x + " and y = " + y); 
-       x = x*y;       
-       y = x/y; 
-       x = x/y; 
-       Console.WriteLine("After swap:"); 
-       Console.WriteLine("x = " + x + " and y = " + y); 
-     }  
-  }
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the value for a: ");
+        int a = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter the value for b: ");
+        int b = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Before swapping:");
+        Console.WriteLine("a = " + a);
+        Console.WriteLine("b = " + b);
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        Console.WriteLine("After swapping:");
+        Console.WriteLine("a = " + a);
+        Console.WriteLine("b = " + b);
+    }
+}
