@@ -30,9 +30,9 @@ class HM
       ht2.put(29,"A+ve");
       ht2.put(49,"AB+ve");
      
- System.out.println("Name and Enrollment of Students are: " +"\n" +ht1+"\n\n");
+  System.out.println("Name and Enrollment of Students are: " +"\n" +ht1+"\n\n");
 
-       System.out.println( "\n Blood Group and Age of Students are: " +"\n" +ht2+"\n\n");
+  System.out.println( "\n Blood Group and Age of Students are: " +"\n" +ht2+"\n\n");
      int delete;
      int delete2;
 
@@ -48,6 +48,6 @@ class HM
       ht2.remove(delete2);
 
       System.out.println("\nUpdated / Final map : "+"\n" +ht1+ "\n " +ht2+"\n\n");
-        System.out.println("\n===============================================================\n");
+      System.out.println("\n===============================================================\n");
     }
   }
