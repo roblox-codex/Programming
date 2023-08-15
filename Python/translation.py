@@ -8,7 +8,7 @@ def translate_text(text, target_language="en"):
     api_key = "YOUR_API_KEY"
     client = translate.TranslationServiceClient()
 
-    parent = f"projects/YOUR_PROJECT_ID"
+    parent = f"projects/YOUR_PROJECT_ID" # Replace with Google Cloud Project ID
 
     response = client.translate_text(
         parent=parent,
