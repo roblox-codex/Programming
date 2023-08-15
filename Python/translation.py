@@ -1,3 +1,6 @@
+#pip install google-cloud-translate
+
+
 from google.cloud import translate
 
 def translate_text(text, target_language="en"):
