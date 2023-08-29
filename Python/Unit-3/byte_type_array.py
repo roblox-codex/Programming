@@ -24,3 +24,9 @@ x = bytes(elements)
 # Retrieve elements from x using a for loop
 for i in x:
     print(i)
+
+##################################################################################
+# Modify the first two elements of x
+
+x[0] = 58
+x [1] = 25
