@@ -1,8 +1,10 @@
-# Relational operators 
+# Relational Operators Program
+
+# Input two numbers from the user
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
 # Greater than (>)
-num1 = 10
-num2 = 5
 greater_than_result = num1 > num2
 print(f"{num1} > {num2}:", greater_than_result)
 
