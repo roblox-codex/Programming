@@ -24,6 +24,6 @@ print(c)
 
 
 # To find the length of list
-li = [10, 20, 30]
+li = [20, 50, 70]
 n = len(li)
 print("The length of list is: ", n)
