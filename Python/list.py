@@ -27,3 +27,12 @@ print(c)
 li = [20, 50, 70]
 n = len(li)
 print("The length of list is: ", n)
+
+
+# Check element exist or not in list
+lst=[ 1, 2, 3, 4, 5, 6 ]
+i=7
+if i in lst:
+    print("exist")
+else:
+    print("not exist")
