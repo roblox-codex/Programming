@@ -40,8 +40,12 @@ else:
 
 # Reverse the list with user input
 lst = input("Enter a list of numbers separated by spaces: ")
-
 lst = [int(x) for x in lst.split()]
 lst.reverse()
 print(lst)
 
+# Smallest number in list
+input_str = input("Enter a list of numbers separated by commas: ")
+numbers = [int(x) for x in input_str.split(',')]
+smallest_number = min(numbers)
+print("The smallest number in the list is:", smallest_number)
