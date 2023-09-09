@@ -36,3 +36,12 @@ if i in lst:
     print("exist")
 else:
     print("not exist")
+
+
+# Reverse the list with user input
+lst = input("Enter a list of numbers separated by spaces: ")
+
+lst = [int(x) for x in lst.split()]
+lst.reverse()
+print(lst)
+
