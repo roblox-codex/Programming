@@ -1,0 +1,13 @@
+1. assignment operator
+2. byte array
+3. complex number addition
+4. convert number
+5. relational operator
+6. arithmetic operator
+7. set function
+8. frozenset 
+9. list function
+10. range function
+11. dictionary function
+12. input function
+13. print function
