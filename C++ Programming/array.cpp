@@ -38,3 +38,30 @@ int main() {
 
     return 0;
 }
+
+// Multidimensional Array 
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int dim1 = 2;
+    const int dim2 = 3;
+    const int dim3 = 4;
+
+    int arr[dim1][dim2][dim3];
+
+    cout << "Enter " << dim1 << " x " << dim2 << " x " << dim3 << " elements for the multidimensional array:" << endl;
+    int value = 1;
+    for (int i = 0; i < dim1; ++i) {
+        for (int j = 0; j < dim2; ++j) {
+            for (int k = 0; k < dim3; ++k) {
+                cin >> arr[i][j][k];
+            }
+        }
+    }
+
+    return 0;
+}
+
