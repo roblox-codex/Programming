@@ -27,7 +27,14 @@ using namespace std;
 int main() {
     const int rows = 3;
     const int cols = 3;
-    int arr[rows][cols] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int arr[rows][cols];
+
+    cout << "Enter " << rows << " rows and " << cols << " columns of elements for the 2D array:" << endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            cin >> arr[i][j];
+        }
+    }
 
     return 0;
 }
