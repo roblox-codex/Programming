@@ -1,4 +1,4 @@
-# F as a goal
+# F as a goal, In this we are trying to find the F
 
 def dfs(graph, start, goal):
     stack = [(start, [start])] 
