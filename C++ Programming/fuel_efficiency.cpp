@@ -1,79 +1,61 @@
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
 int main() {
-    double gasPrices[4];
-    double totalGasPrice = 0;
-    double averageGasPrice;
-    
-    // Input gas prices using a for loop
-    cout << "Enter the gas prices from four gas stations:" << endl;
-    for (int i = 0; i < 4; i++) {
-        cout << "Gas price at station " << (i + 1) << ": $";
+    // Declare the necessary variables
+    double gasPrices[4];   // Array to store the gas prices
+    double avgPrice = 0.0; // Average price 
+    double startMileage, endMileage, gallons;
+    double totalMiles = 0.0, totalGallons = 0.0;
+    double avgMilesPerGallon, cost;
+
+    // Use a for loop to enter the price per gallon from four gas stations and calculate the average price
+    for(int i=0; i<4; i++){
+        cout << "Enter the price per gallon at station #" << i+1 << ": ";
         cin >> gasPrices[i];
-        while (gasPrices[i] <= 0) {
-            cout << "Gas price must be greater than zero. Enter a valid price: $";
-            cin >> gasPrices[i];
-        }
-        totalGasPrice += gasPrices[i];
+        avgPrice += gasPrices[i];
     }
-    
-    // Calculate average gas price
-    averageGasPrice = totalGasPrice / 4.0;
+    avgPrice /= 4;
 
-    int odometerReading = 0;
-    int previousOdometerReading = 0;
-    double totalMiles = 0;
-    double totalGallons = 0;
-    double averageMilesPerGallon;
-    
-    // Input odometer readings and gallons purchased using a while loop
-    cout << "Enter odometer readings and gallons purchased (Enter -1 to stop):" << endl;
-    cin >> odometerReading;
-    while (odometerReading != -1) {
-        if (odometerReading <= previousOdometerReading) {
-            cout << "Invalid odometer reading. It must be greater than the previous reading." << endl;
-        } else {
-            double gallons;
-            cout << "Gallons purchased: ";
-            cin >> gallons;
-            
-            while (gallons <= 0) {
-                cout << "Gallons must be greater than zero. Enter a valid number of gallons: ";
-                cin >> gallons;
-            }
-            
-            totalMiles += odometerReading - previousOdometerReading;
-            totalGallons += gallons;
-            previousOdometerReading = odometerReading;
-        }
-        
-        cout << "Enter odometer reading (or -1 to stop): ";
-        cin >> odometerReading;
+    // Use a while loop to enter the odometer readings and gallons purchased
+    // The loop should repeatedly accumulate the number of miles traveled and number of gallons purchased
+    char continueInput = 'y';
+    while (continueInput == 'y' || continueInput == 'Y') {
+        cout << "Enter the beginning odometer reading: ";
+        cin >> startMileage;
+        cout << "Enter the ending odometer reading: ";
+        cin >> endMileage;
+        cout << "Enter the gallons required for your fill-up: ";
+        cin >> gallons;
+        totalMiles += (endMileage - startMileage);
+        totalGallons += gallons;
+        cout << "Enter y to enter more readings or n to quit: ";
+        cin >> continueInput;
     }
-    
-    // Calculate average miles per gallon
-    averageMilesPerGallon = totalMiles / totalGallons;
 
-    // Calculate the cost to drive 220 miles
-    double costFor220Miles = 220 / averageMilesPerGallon * averageGasPrice;
-
-    // Display results
-    cout << fixed << setprecision(2);
-    cout << "\nAverage Price per Gallon: $" << averageGasPrice << endl;
-    cout << "Average Miles per Gallon: " << averageMilesPerGallon << " mpg" << endl;
-    cout << "Cost to drive 220 miles: $" << costFor220Miles << endl;
+    // Calculate the car’s average miles per gallon
+    avgMilesPerGallon = totalMiles / totalGallons;
     
-    // Determine fuel efficiency classification
-    cout << "Fuel Efficiency Classification: ";
-    if (averageMilesPerGallon > 28)
-        cout << "Very Efficient" << endl;
-    else if (averageMilesPerGallon > 17)
-        cout << "OK" << endl;
-    else
-        cout << "Very Inefficient" << endl;
+    // Calculate the cost to take the car on a trip of 220 miles
+    cost = (220 / avgMilesPerGallon) * avgPrice;
+
+    // Determine the car's fuel efficiency
+    string efficiency;
+    if (avgMilesPerGallon <= 17) {
+        efficiency = "Very inefficient";
+    } else if (avgMilesPerGallon > 17 && avgMilesPerGallon <= 28) {
+        efficiency = "OK";
+    } else {
+        efficiency = "Very efficient";
+    }
+
+    // Display the results with precision up to 2 decimal places
+    cout << setprecision(2) << fixed;
+    cout << "Average miles per gallon: " << avgMilesPerGallon << endl;
+    cout << "Average price per gallon: $" << avgPrice << endl;
+    cout << "Cost to drive the car 220 miles: $" << cost << endl;
+    cout << "Fuel efficiency: " << efficiency << endl;
 
     return 0;
 }
