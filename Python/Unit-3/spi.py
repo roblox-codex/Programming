@@ -1,4 +1,4 @@
-def calculate_cgpa():
+def calculate_spi():
 
     num_subjects = int(input("Enter the number of subjects: "))
 
@@ -27,8 +27,8 @@ def calculate_cgpa():
         total_grade_points += grade_points * credit_hours
         total_credit_hours += credit_hours
 
-    cgpa = total_grade_points / total_credit_hours
+    spi = total_grade_points / total_credit_hours
 
-    print(f"CGPA: {cgpa:.2f}")
+    print(f"spi: {spi:.2f}")
 
-calculate_cgpa()
+calculate_spi()
