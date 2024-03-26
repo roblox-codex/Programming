@@ -1,16 +1,18 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 
-public class Factorial {
-    public static void main(String[] args) {
+ public class Factorial{
+    public static void main(String[] args){
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int num = scanner.nextInt();
-        int factorial = 1;
 
-        for (int i = 1; i <= num; ++i) {
-            factorial *= i;
+        BigInteger fact = BigInteger.ONE;
+        for(int i=1; i<=num; i++){
+            fact = fact.multiply(BigInteger.valueOf(i));
         }
 
-        System.out.println("Factorial of " + num + " = " + factorial);
+        System.out.println("Factorial of " + num + " is " + fact);
     }
 }
