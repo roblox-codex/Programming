@@ -73,3 +73,19 @@ int main() {
     }
     return 0;
 }
+
+//Example
+/*
+
+S → aBDh
+
+B → cC
+C → bC / ∈
+
+D → EF
+
+E → g / ∈
+
+F → f / ∈
+
+*/
