@@ -1,0 +1,18 @@
+/* /components/WaveformVisualizer.module.css */
+.container {
+    position: relative;
+  }
+  
+  .canvas {
+    cursor: crosshair;
+    transition: background-color 0.3s;
+  }
+  
+  .dragging {
+    cursor: col-resize;
+  }
+  
+  .canvas:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
